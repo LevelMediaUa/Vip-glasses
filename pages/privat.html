@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vip-glasses</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" href="../img/favicon.jpg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+    <body>
+        <header class="header">
+            <div class="header_nav">
+                <ul class="header_nav-list">
+                    <li class="header_nav-item">ДОСТАВКА И ОПЛАТА</li>
+                    <li class="header_nav-item">ОБМЕН И ВОЗВРАТ</li>
+                    <li class="header_nav-item">КОНТАКТЫ </li>
+                    <li class="header_nav-item">О НАС</li>
+                </ul>
+                <ul class="header_nav-list">
+                    <li class="header_nav-item">RU</li>
+                    <li class="header_nav-item">HE</li>
+                </ul>
+            </div>
+            <div class="header_prod">
+                <button class="mobile-menu-btn open" aria-expanded="false" aria-controls="menu-container" menu-button-open>
+                <img src="../img/menu.svg"></button>      
+                            <div class="mobile-menu" id="menu-container" data-menu>
+                                <div class="header_nav"></div>
+                                <div class="mobile_header">
+                                    <button class="mobile-menu-btn close" aria-expanded="false" aria-controls="menu-container" menu-button-close>
+                                        <img src="../img/close.svg" alt="menu" class="icon-close" />
+                                    </button>
+                                
+                                    <img src="../img/logo.svg">
+                                    <div class="header_nav-list">
+                                        <a class="header_nav-item"><img src="../img/lupa.svg" alt="lupa"></a>
+                                        <a class="header_nav-item"><img src="../img/people.svg" alt="people"></a>
+                                        <a class="header_nav-item"><img src="../img/shop.svg" alt="shop"></a>
+                                    </div>
+                                </div>
+                                <div class="mobile_body">
+                                    <div class="select collapsed" >
+                                      <div class="shown">Женщины</div>
+                                      <div class="option">Солнцезащитные очки</div>
+                                      <div class="option">Очки</div>
+                                      <div class="option">Бестселлеры</div>
+                                      <div class="option">Новые поступленые</div>
+                                      <div class="option">Премиум очки</div>
+                                    </div>
+                                    <div class="select collapsed" >
+                                      <div class="shown">Мужчины</div>
+                                      <div class="option">Солнцезащитные очки</div>
+                                      <div class="option">Очки</div>
+                                      <div class="option">Бестселлеры</div>
+                                      <div class="option">Новые поступленые</div>
+                                      <div class="option">Премиум очки</div>
+                                    </div>
+                                    <div class="select collapsed" >
+                                      <div class="shown">Бренды</div>
+                                      <div class="option">Очки</div>
+                                    </div>
+                                    <div class="select collapsed" >
+                                      <div class="shown">Специальные предложения</div>
+                                      <div class="option">Новые поступленые</div>
+                                      <div class="option">Премиум очки</div>
+                                      <div class="option">Бестселлеры</div>
+                                    </div>
+                                  </div>
+                                <div class="mobile_footer">
+                                    <p class="mobile_footer-info">ДОСТАВКА И ОПЛАТА</p>
+                                    <p class="mobile_footer-info">ОБМЕН И ВОЗВРАТ</p>
+                                    <p class="mobile_footer-info">КОНТАКТЫ </p>
+                                    <p class="mobile_footer-info">О НАС</p>
+                                </div>
+                                <div class="mobile_lng">
+                                    <p class="mobile_lng-info">RU</p>
+                                    <p class="mobile_lng-info">HE</p>
+                                </div>
+                            </div>
+                <img src="../img/logo.svg">
+                <ul class="header_nav-list">
+                    <li class="header_nav-item">ЖЕНЩИНЫ</li>
+                    <li class="header_nav-item">МУЖЧИНЫ</li>
+                    <li class="header_nav-item">БРЕНДЫ</li>
+                    <li class="header_nav-item">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</li>
+                </ul>
+                <div class="header_nav-list">
+                    <a class="header_nav-item"><img src="../img/lupa.svg" alt="lupa"></a>
+                    <a class="header_nav-item"><img src="../img/people.svg" alt="people"></a>
+                    <a class="header_nav-item"><img src="../img/shop.svg" alt="shop"></a>
+                </div>
+            </div>
+       </header>
+
+    <main>           
+            <section class="container decor">
+                <h1>Личный кабинет</h1>
+            </section>
+
+            <section class="container privat">
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'info')">Контактная информация</button>
+                    <button class="tablinks" onclick="openCity(event, 'list')">Список желаний </button>
+                    <button class="tablinks" onclick="openCity(event, 'history')">История заказа</button>
+                </div>
+                
+                <div id="info" class="tabcontent">
+                    
+                        <form class="privat_info-form">
+                            <div class="privat_info-person">
+                                <div class="order_form-part">
+                                    <label for="name" class="order_form-name">Имя</label>
+                                    <input
+                                    required
+                                    placeholder="Alex"
+                                    class="order_client-input"
+                                    />
+                                    <label for="tel" class="order_form-name">Номер телефона</label>
+                                    <input
+                                    type="tel"
+                                    pattern="^[ 0-9]+$"
+                                    required
+                                    placeholder="+90"
+                                    class="order_client-input"
+                                    />
+                                    <label for="tel" class="order_form-name">Логин</label>
+                                    <input
+                                    required
+                                    class="order_client-input"
+                                    />
+                                    <p class="privat_login">Именно так ваше имя будет отображаться в разделе аккаунта и в отзывах.</p>
+                                </div>
+                                <div class="order_form-part">
+                                    <label for="sureName" class="order_form-name">Фамилия</label>
+                                    <input
+                                    required
+                                    placeholder="Aleekseev"
+                                    class="order_client-input"
+                                    />
+                
+                                    <label for="mail" class="order_form-name">E-mail</label>
+                                    <input
+                                    type="email"
+                                    required
+                                    placeholder="Введите електронную почту"
+                                    class="order_client-input"
+                                    />
+                                </div>
+                            </div>
+                            <div class="privat_info">
+                                <label for="sureName" class="order_form-name">Изменение пароля</label>
+                                    <input
+                                    required
+                                    placeholder="Текущий пароль (оставьте пустым, чтобы оставить без изменений)"
+                                    class="privat_info-input"
+                                    />
+                
+                                    <input
+                                    required
+                                    placeholder="Новый пароль (оставьте пустым, чтобы оставить без изменений)"
+                                    class="privat_info-input"
+                                    />
+                                    <input
+                                    required
+                                    placeholder="Подтвердите новый пароль"
+                                    class="privat_info-input"
+                                    />
+                                    <button class="privat_info-btn">СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
+                            </div>
+                        </form>
+
+                </div>
+                
+                <div id="list" class="tabcontent">
+                    <div class="privat_list">
+                        <div>
+                            <div class="order_basket-info">
+                                <img src="../img/order1.jpg">
+                                <div>
+                                    <h5 class="order_basket-title">VERSACE</h5>
+                                    <p class="order_basket-seria">VE4409</p>
+                                    <p class="order_basket-colour">brown</p>
+                                </div>
+                                <div id="counter">
+                                    <img src="../img/2.svg"  data-action="decrement">
+                                    <span id="value">1</span>
+                                    <img src="../img/3.svg"  data-action="increment">
+                                </div>
+                                <p class="order_basket-price">$224</p>
+                                <img src="../img/heart.svg">
+                            </div>
+                            <hr class="order_line">
+                            <div class="order_basket-info">
+                                <img src="../img/order2.jpg">
+                                <div>
+                                    <h5 class="order_basket-title">VERSACE</h5>
+                                    <p class="order_basket-seria">VE4409</p>
+                                    <p class="order_basket-colour">brown</p>
+                                </div>
+                                <div id="counter">
+                                    <img src="../img/2.svg"  data-action="decrement">
+                                    <span id="value">1</span>
+                                    <img src="../img/3.svg"  data-action="increment">
+                                </div>
+                                <p class="order_basket-price">$420</p>
+                                <img src="../img/heart.svg">
+                            </div>
+                            <hr class="order_line">
+                            <div class="order_basket-info">
+                                <img src="../img/order2.jpg">
+                                <div>
+                                    <h5 class="order_basket-title">VERSACE</h5>
+                                    <p class="order_basket-seria">VE4409</p>
+                                    <p class="order_basket-colour">brown</p>
+                                </div>
+                                <div id="counter">
+                                    <img src="../img/2.svg"  data-action="decrement">
+                                    <span id="value">1</span>
+                                    <img src="../img/3.svg"  data-action="increment">
+                                </div>
+                                <p class="order_basket-price">$420</p>
+                                <img src="../img/heart.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="history" class="tabcontent">
+                    <ul class="privat_history-list">
+                        <li class="privat_history-item">
+                            <div>
+                                <p class="privat_history-title">Номер заказа</p>
+                                <p class="privat_history-info"><img src="../img/polygon.svg"> 1673187214</p>
+                            </div>
+                            <div>
+                                <p class="privat_history-title">Дата</p>
+                                <p class="privat_history-info">08.01.2023</p>
+                            </div>
+                            <div>
+                                <p class="privat_history-title">Итог</p>
+                                <p class="privat_history-info"><b>$572.00</b></p>
+                            </div>
+                            <div>
+                                <p class="privat_history-title">Статус</p>
+                                <p class="privat_history-info">Получено</p>
+                            </div>
+                        </li>
+                        <li class="privat_history-item">
+                            <div>
+                                <p class="privat_history-title">Номер заказа</p>
+                                <p class="privat_history-info"><img src="../img/polygon.svg"> 1673187214</p>
+                            </div>
+                            <div>
+                                <p class="privat_history-title">Дата</p>
+                                <p class="privat_history-info">08.01.2023</p>
+                            </div>
+                            <div>
+                                <p class="privat_history-title">Итог</p>
+                                <p class="privat_history-info"><b>$572.00</b></p>
+                            </div>
+                            <div>
+                                <p class="privat_history-title">Статус</p>
+                                <p class="privat_history-info">Получено</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+    </main>
+
+    <footer class="footer container">
+        <div class="footer-main">
+            <div class="footer_main-about">
+                <div><p class="footer_main-info">О нас </p><p class="footer_main-info">Оплата и доставка</p></div>
+                <div><p class="footer_main-info">Обмен и возврат</p><p class="footer_main-info">Часто задаваемые вопросы</p></div>
+                <div><p class="footer_main-info">Контакты</p><p class="footer_main-info">Политика конфиденциальности</p></div>
+                <div><p class="footer_main-info">Сделано в  Level Media</p></div>
+            </div>
+            <div>
+                <ul class="footer_main-pay">
+                    <li><img src="../img/pay1.jpg"></li>
+                    <li><img src="../img/pay2.jpg"></li>
+                    <li><img src="../img/pay3.jpg"></li>
+                    <li><img src="../img/pay4.jpg"></li>
+                    <li><img src="../img/pay5.jpg"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_law"><p>© 2023 Интернет-магазинв Вип глесс. Все права захищенные </p></div>
+        
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script src="../js/tab.js"></script>
+</body>
+</html>
