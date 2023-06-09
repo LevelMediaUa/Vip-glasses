@@ -91,7 +91,10 @@
                     <li class="header_nav-item">СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</li>
                 </ul>
                 <div class="header_nav-list">
-                    <a class="header_nav-item"><img src="../img/lupa.svg" alt="lupa"></a>
+                    <a class="header_nav-item search-box">
+                        <button class="btn-search"></button>
+                        <input type="text" class="input-search">
+                        </a>
                     <a class="header_nav-item"><img src="../img/people.svg" alt="people"></a>
                     <a class="header_nav-item"><img src="../img/shop.svg" alt="shop"></a>
                 </div>
@@ -111,16 +114,62 @@
                 <div class="sorting">
                     <label class="sorting_down">Сортировать по:</label>
                     <div class="">
-                    <select class="js-example-basic-single cosmetic_filter-input">
-                    <option value="" selected class="">Лучшие продажи</option>
-                    <option value="" class="">По алфавиту А-Я</option>
-                    <option value="" class="">По алфавиту Я-А</option>
-                    <option value="" class="">Цена високая - низкая</option>
-                    <option value="" class="">Цена низкая - високая</option>
-                    <option value="" class="">Новейшее поступление</option>
-                </select>
-              </div>
-                    <p class="sorting_arrow">Фильтр</p>
+                        <select class="js-example-basic-single cosmetic_filter-input">
+                            <option value="" selected class="">Лучшие продажи</option>
+                            <option value="" class="">По алфавиту А-Я</option>
+                            <option value="" class="">По алфавиту Я-А</option>
+                            <option value="" class="">Цена високая - низкая</option>
+                            <option value="" class="">Цена низкая - високая</option>
+                            <option value="" class="">Новейшее поступление</option>
+                        </select>
+                    </div>
+
+                    <div class="dropdown">
+                        <p onclick="myFunction()" class="sorting_arrow">Фильтр</p>
+                          <div id="myDropdown" class="dropdown-content">
+                            <label class="filter">летчик
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">черный
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">плетеный
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">золото
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">прямоугольник
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">без оправы
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">солнцезащитные очки
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">прозрачные
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">белое золото
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">древесина
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <button class="dropdown_filter-btn">Применить</button>
+                          </div>
+                    </div>
                 </div>
             </div>
         </section>

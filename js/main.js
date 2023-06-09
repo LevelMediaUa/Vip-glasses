@@ -158,3 +158,32 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+
+
+
+document.querySelectorAll(".select").forEach((el)=> {
+  el.addEventListener("click", function (e){
+    if (e.target && e.target.matches(".option")) {
+      this.querySelector(".shown").innerHTML = e.target.innerHTML;
+    }
+    this.classList.toggle("collapsed");
+  });
+});
+
+
+
+
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+
+
+
+
+
+
+
