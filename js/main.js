@@ -161,29 +161,22 @@ function openCity(evt, cityName) {
 
 
 
-
-document.querySelectorAll(".select").forEach((el)=> {
-  el.addEventListener("click", function (e){
-    if (e.target && e.target.matches(".option")) {
-      this.querySelector(".shown").innerHTML = e.target.innerHTML;
-    }
-    this.classList.toggle("collapsed");
-  });
-});
-
-
+//questin
+// document.querySelectorAll(".select").forEach((el)=> {
+//   el.addEventListener("click", function (e){
+//     if (e.target && e.target.matches(".option")) {
+//       this.querySelector(".shown").innerHTML = e.target.innerHTML;
+//     }
+//     this.classList.toggle("collapsed");
+//   });
+// });
 
 
 
+
+//filter
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
-
-
-
-
-
-
-
 
 

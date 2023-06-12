@@ -106,25 +106,73 @@
             <img src="../img/brendMan.jpg">
         </section>
 
+
         <section class="container">
             <div class="sort">
-                <div>
+                <div class="sort_result">
                     <p>Результат  9 из 170</p>
                 </div>
                 <div class="sorting">
                     <label class="sorting_down">Сортировать по:</label>
                     <div class="">
-                    <select class="js-example-basic-single cosmetic_filter-input">
-                        <option value="" selected class="">Лучшие продажи</option>
-                        <option value="" class="">По алфавиту А-Я</option>
-                        <option value="" class="">По алфавиту Я-А</option>
-                        <option value="" class="">Цена високая - низкая</option>
-                        <option value="" class="">Цена низкая - високая</option>
-                        <option value="" class="">Новейшее поступление</option>
-                    </select>
-              </div>
-                    <p class="sorting_arrow">Фильтр</p>
+                        <select class="js-example-basic-single cosmetic_filter-input">
+                            <option value="" selected class="">Лучшие продажи</option>
+                            <option value="" class="">По алфавиту А-Я</option>
+                            <option value="" class="">По алфавиту Я-А</option>
+                            <option value="" class="">Цена високая - низкая</option>
+                            <option value="" class="">Цена низкая - високая</option>
+                            <option value="" class="">Новейшее поступление</option>
+                        </select>
+                    </div>
+
+                    <div class="dropdown" onclick="myFunction()">
+                        <p class="sorting_arrow">Фильтр</p>
+                          <div id="myDropdown" class="dropdown-content">
+                            <label class="filter">летчик
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">черный
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">плетеный
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">золото
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">прямоугольник
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">без оправы
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">солнцезащитные очки
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">прозрачные
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">белое золото
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filter">древесина
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <button class="dropdown_filter-btn">Применить</button>
+                          </div>
+                    </div>
                 </div>
+
             </div>
         </section>
 
@@ -169,7 +217,7 @@
                 <div><p class="footer_main-info">О нас </p><p class="footer_main-info">Оплата и доставка</p></div>
                 <div><p class="footer_main-info">Обмен и возврат</p><p class="footer_main-info">Часто задаваемые вопросы</p></div>
                 <div><p class="footer_main-info">Контакты</p><p class="footer_main-info">Политика конфиденциальности</p></div>
-                <div><p class="footer_main-info">Сделано в  Level Media</p></div>
+                <div class="madeBy"><p class="footer_main-info">Сделано в  Level Media</p></div>
             </div>
             <div>
                 <ul class="footer_main-pay">
@@ -179,6 +227,7 @@
                     <li><img src="../img/pay4.jpg"></li>
                     <li><img src="../img/pay5.jpg"></li>
                 </ul>
+                <div class="made"><p class="footer_main-info">Сделано в  Level Media</p></div>
             </div>
         </div>
         <div class="footer_law"><p>© 2023 Интернет-магазинв Вип глесс. Все права захищенные </p></div>
