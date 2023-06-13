@@ -103,14 +103,14 @@
 
     <main>           
             <section class="container decor">
-                <h1>Личный кабинет</h1>
+                <h1 class="decor_title">Личный кабинет</h1>
             </section>
 
             <section class="container privat">
                 <div class="tab">
-                    <button class="tablinks" onclick="openCity(event, 'info')">Контактная информация</button>
-                    <button class="tablinks" onclick="openCity(event, 'list')">Список желаний </button>
-                    <button class="tablinks" onclick="openCity(event, 'history')">История заказа</button>
+                    <button class="tablinks" onclick="openCard(event, 'info')">Контактная информация</button>
+                    <button class="tablinks" onclick="openCard(event, 'list')">Список желаний </button>
+                    <button class="tablinks" onclick="openCard(event, 'history')">История заказа</button>
                 </div>
                 
                 <div id="info" class="tabcontent">
@@ -163,12 +163,13 @@
                                     placeholder="Текущий пароль (оставьте пустым, чтобы оставить без изменений)"
                                     class="privat_info-input"
                                     />
-                
+                                <label for="sureName" class="order_form-name">Изменение пароля</label>
                                     <input
                                     required
                                     placeholder="Новый пароль (оставьте пустым, чтобы оставить без изменений)"
                                     class="privat_info-input"
                                     />
+                                <label for="sureName" class="order_form-name">Новый пароль</label>
                                     <input
                                     required
                                     placeholder="Подтвердите новый пароль"
@@ -185,10 +186,11 @@
                         <div>
                             <div class="order_basket-info">
                                 <img src="../img/order1.jpg">
-                                <div>
+                                <div class="order_basket-block">
                                     <h5 class="order_basket-title">VERSACE</h5>
                                     <p class="order_basket-seria">VE4409</p>
                                     <p class="order_basket-colour">brown</p>
+                                    <p class="order_line-price">$420</p>
                                 </div>
                                 <div id="counter">
                                     <img src="../img/2.svg"  data-action="decrement">
@@ -196,15 +198,16 @@
                                     <img src="../img/3.svg"  data-action="increment">
                                 </div>
                                 <p class="order_basket-price">$224</p>
-                                <img src="../img/heart.svg">
+                                <img src="../img/heart.svg" class="heart">
                             </div>
                             <hr class="order_line">
                             <div class="order_basket-info">
                                 <img src="../img/order2.jpg">
-                                <div>
+                                <div class="order_basket-block">
                                     <h5 class="order_basket-title">VERSACE</h5>
                                     <p class="order_basket-seria">VE4409</p>
                                     <p class="order_basket-colour">brown</p>
+                                    <p class="order_line-price">$420</p>
                                 </div>
                                 <div id="counter">
                                     <img src="../img/2.svg"  data-action="decrement">
@@ -212,15 +215,16 @@
                                     <img src="../img/3.svg"  data-action="increment">
                                 </div>
                                 <p class="order_basket-price">$420</p>
-                                <img src="../img/heart.svg">
+                                <img src="../img/heart.svg" class="heart">
                             </div>
                             <hr class="order_line">
                             <div class="order_basket-info">
                                 <img src="../img/order2.jpg">
-                                <div>
+                                <div class="order_basket-block">
                                     <h5 class="order_basket-title">VERSACE</h5>
                                     <p class="order_basket-seria">VE4409</p>
                                     <p class="order_basket-colour">brown</p>
+                                    <p class="order_line-price">$420</p>
                                 </div>
                                 <div id="counter">
                                     <img src="../img/2.svg"  data-action="decrement">
@@ -228,7 +232,7 @@
                                     <img src="../img/3.svg"  data-action="increment">
                                 </div>
                                 <p class="order_basket-price">$420</p>
-                                <img src="../img/heart.svg">
+                                <img src="../img/heart.svg" class="heart">
                             </div>
                         </div>
                     </div>
@@ -239,7 +243,7 @@
                         <li class="privat_history-item">
                             <div>
                                 <p class="privat_history-title">Номер заказа</p>
-                                <p class="privat_history-info"><img src="../img/polygon.svg"> 1673187214</p>
+                                <span class="privat_history-info"><img src="../img/polygon.svg"> 1673187214</span>
                             </div>
                             <div>
                                 <p class="privat_history-title">Дата</p>
@@ -257,7 +261,7 @@
                         <li class="privat_history-item">
                             <div>
                                 <p class="privat_history-title">Номер заказа</p>
-                                <p class="privat_history-info"><img src="../img/polygon.svg"> 1673187214</p>
+                                <span class="privat_history-info"><img src="../img/polygon.svg"> 1673187214</span>
                             </div>
                             <div>
                                 <p class="privat_history-title">Дата</p>
@@ -275,6 +279,187 @@
                     </ul>
                 </div>
             </section>
+
+
+
+            <section class="container privat-mob">
+                <div>
+                    <button class="tablinks">Контактная информация</button>
+                    <div id="info" class="">
+                    
+                        <form class="privat_info-form">
+                            <div class="privat_info-person">
+                                <div class="order_form-part">
+                                    <label for="name" class="order_form-name">Имя</label>
+                                    <input
+                                    required
+                                    placeholder="Alex"
+                                    class="order_client-input"
+                                    />
+                                    <label for="tel" class="order_form-name">Номер телефона</label>
+                                    <input
+                                    type="tel"
+                                    pattern="^[ 0-9]+$"
+                                    required
+                                    placeholder="+90"
+                                    class="order_client-input"
+                                    />
+                                    <label for="tel" class="order_form-name">Логин</label>
+                                    <input
+                                    required
+                                    class="order_client-input"
+                                    />
+                                    <p class="privat_login">Именно так ваше имя будет отображаться в разделе аккаунта и в отзывах.</p>
+                                </div>
+                                <div class="order_form-part">
+                                    <label for="sureName" class="order_form-name">Фамилия</label>
+                                    <input
+                                    required
+                                    placeholder="Aleekseev"
+                                    class="order_client-input"
+                                    />
+                
+                                    <label for="mail" class="order_form-name">E-mail</label>
+                                    <input
+                                    type="email"
+                                    required
+                                    placeholder="Введите електронную почту"
+                                    class="order_client-input"
+                                    />
+                                </div>
+                            </div>
+                            <div class="privat_info">
+                                <label for="sureName" class="order_form-name">Изменение пароля</label>
+                                    <input
+                                    required
+                                    placeholder="Текущий пароль (оставьте пустым, чтобы оставить без изменений)"
+                                    class="privat_info-input"
+                                    />
+                                <label for="sureName" class="order_form-name">Изменение пароля</label>
+                                    <input
+                                    required
+                                    placeholder="Новый пароль (оставьте пустым, чтобы оставить без изменений)"
+                                    class="privat_info-input"
+                                    />
+                                <label for="sureName" class="order_form-name">Новый пароль</label>
+                                    <input
+                                    required
+                                    placeholder="Подтвердите новый пароль"
+                                    class="privat_info-input"
+                                    />
+                                    <button class="privat_info-btn">СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
+                            </div>
+                        </form>
+
+                </div>
+
+                </div>
+
+                <div>
+                    <button class="tablinks">Список желаний </button>
+                    <div id="list" class="">
+                        <div class="privat_list">
+                            <div>
+                                <div class="order_basket-info">
+                                    <img src="../img/order1.jpg">
+                                    <div class="order_basket-block">
+                                        <h5 class="order_basket-title">VERSACE</h5>
+                                        <p class="order_basket-seria">VE4409</p>
+                                        <p class="order_basket-colour">brown</p>
+                                        <p class="order_line-price">$420</p>
+                                    </div>
+                                    <div id="counter">
+                                        <img src="../img/2.svg"  data-action="decrement">
+                                        <span id="value">1</span>
+                                        <img src="../img/3.svg"  data-action="increment">
+                                    </div>
+                                    <p class="order_basket-price">$224</p>
+                                    <img src="../img/heart.svg" class="heart">
+                                </div>
+                                <hr class="order_line">
+                                <div class="order_basket-info">
+                                    <img src="../img/order2.jpg">
+                                    <div class="order_basket-block">
+                                        <h5 class="order_basket-title">VERSACE</h5>
+                                        <p class="order_basket-seria">VE4409</p>
+                                        <p class="order_basket-colour">brown</p>
+                                        <p class="order_line-price">$420</p>
+                                    </div>
+                                    <div id="counter">
+                                        <img src="../img/2.svg"  data-action="decrement">
+                                        <span id="value">1</span>
+                                        <img src="../img/3.svg"  data-action="increment">
+                                    </div>
+                                    <p class="order_basket-price">$420</p>
+                                    <img src="../img/heart.svg" class="heart">
+                                </div>
+                                <hr class="order_line">
+                                <div class="order_basket-info">
+                                    <img src="../img/order2.jpg">
+                                    <div class="order_basket-block">
+                                        <h5 class="order_basket-title">VERSACE</h5>
+                                        <p class="order_basket-seria">VE4409</p>
+                                        <p class="order_basket-colour">brown</p>
+                                        <p class="order_line-price">$420</p>
+                                    </div>
+                                    <div id="counter">
+                                        <img src="../img/2.svg"  data-action="decrement">
+                                        <span id="value">1</span>
+                                        <img src="../img/3.svg"  data-action="increment">
+                                    </div>
+                                    <p class="order_basket-price">$420</p>
+                                    <img src="../img/heart.svg" class="heart">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="tablinks">История заказа</button>
+                    <div id="history" class="">
+                        <ul class="privat_history-list">
+                            <li class="privat_history-item">
+                                <div>
+                                    <p class="privat_history-title">Номер заказа</p>
+                                    <span class="privat_history-info"><img src="../img/polygon.svg"> 1673187214</span>
+                                </div>
+                                <div>
+                                    <p class="privat_history-title">Дата</p>
+                                    <p class="privat_history-info">08.01.2023</p>
+                                </div>
+                                <div>
+                                    <p class="privat_history-title">Итог</p>
+                                    <p class="privat_history-info"><b>$572.00</b></p>
+                                </div>
+                                <div>
+                                    <p class="privat_history-title">Статус</p>
+                                    <p class="privat_history-info">Получено</p>
+                                </div>
+                            </li>
+                            <li class="privat_history-item">
+                                <div>
+                                    <p class="privat_history-title">Номер заказа</p>
+                                    <span class="privat_history-info"><img src="../img/polygon.svg"> 1673187214</span>
+                                </div>
+                                <div>
+                                    <p class="privat_history-title">Дата</p>
+                                    <p class="privat_history-info">08.01.2023</p>
+                                </div>
+                                <div>
+                                    <p class="privat_history-title">Итог</p>
+                                    <p class="privat_history-info"><b>$572.00</b></p>
+                                </div>
+                                <div>
+                                    <p class="privat_history-title">Статус</p>
+                                    <p class="privat_history-info">Получено</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
 
     </main>
 
@@ -306,5 +491,7 @@
     <script src="../js/main.js"></script>
 
     <script src="../js/tab.js"></script>
+
+        
 </body>
 </html>

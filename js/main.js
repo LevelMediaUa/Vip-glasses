@@ -17,20 +17,6 @@
     }
   })();
 
-  
-
-  document.querySelectorAll(".select").forEach((el)=> {
-    el.addEventListener("click", function (e){
-      if (e.target && e.target.matches(".option")) {
-        this.querySelector(".shown").innerHTML = e.target.innerHTML;
-      }
-      this.classList.toggle("collapsed");
-    });
-  }); 
-
-
-
-
 
   $(document).ready(function () {
     $('.hero-img').slick({
@@ -145,7 +131,7 @@ tabs.onclick = e => {
 
 
 
-function openCity(evt, cityName) {
+function openCard(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -158,18 +144,6 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
-
-
-//questin
-// document.querySelectorAll(".select").forEach((el)=> {
-//   el.addEventListener("click", function (e){
-//     if (e.target && e.target.matches(".option")) {
-//       this.querySelector(".shown").innerHTML = e.target.innerHTML;
-//     }
-//     this.classList.toggle("collapsed");
-//   });
-// });
 
 
 

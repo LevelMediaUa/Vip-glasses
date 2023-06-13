@@ -732,6 +732,7 @@ main {
     line-height: 24px;
     text-transform: uppercase;
     color: #1C1F20;
+    margin-bottom: 13px;
 }
 .order_client {
     background: #FAFAFA;
@@ -777,7 +778,7 @@ main {
     font-size: 14px;
     line-height: 22px;
     color: #282828;
-    opacity: 0.5;
+    /* opacity: 0.5; */
 }
 .order_form {
     display: flex;
@@ -952,24 +953,20 @@ main {
     text-transform: uppercase;
     font-weight: 300;
   }
-  
-  /* Change background color of buttons on hover */
-  /* .tab button:hover {
-    background-color: #ddd;
-  } */
-  
-  /* Create an active/current tablink class */
+
 .tablinks.active {
     font-weight: 500;
 }
 .tabcontent {
     display: none;
-    /* padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none; */
+
 }
 .privat {
     margin-bottom: 190px;
+    display: block;
+}
+.privat-mob {
+    display: none;
 }
 .privat_list {
     padding: 32px 87px 39px 41px;
@@ -1008,13 +1005,17 @@ main {
     font-size: 14px;
     line-height: 22px;
     color: #808080;
-    opacity: 0.5;
     border: none;
     background-color: #FFFFFF;
     outline: none;
     width: 487.93px;
     height: 44px;
     margin-bottom: 31px;
+}
+.privat_info-input::placeholder,
+.order_client-input::placeholder {
+    opacity: 0.5;
+    color: #808080;
 }
 .privat_login {
     font-weight: 400;
@@ -1051,6 +1052,7 @@ main {
     line-height: 19px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 .about {
     display: flex;
@@ -1110,8 +1112,16 @@ main {
     letter-spacing: 1.8px;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding: 13px 38px;
+    /* padding: 13px 38px; */
     cursor: pointer;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.about_more .about_women-btn {
+    margin-left: auto;
+    margin-right: auto;
 }
 .about_img-part {
     display: flex;
@@ -1345,6 +1355,11 @@ main {
 .contact_img {
     width: 50%;
     overflow: auto;
+    background-image: url(./img/contact.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .contact_img img {
     width: 100%;
@@ -1425,16 +1440,11 @@ main {
     padding-left: 178px;
     margin-bottom: 124px;
 }
-.select {
-    overflow: hidden;
-    font-weight: 300px;
-    margin: 0;
+
+.dropdown__item {
     position: relative;
-    height: auto;
-    max-height: calc(40px * 8); /* max 8 element in list */
-    transition: 0.8s;
 }
-.select:before {
+.dropdown__item:before {
     content: '';
     position: absolute;
     background-image: url(./img/plusing.svg);
@@ -1442,21 +1452,20 @@ main {
     height: 20px;
     top: 15px;
     right: 15px;
-}
-.collapsed {
-    max-height: 40px;
-    transition: 0.8s;
-}
-.collapsed:before {
-    content: '';
-    position: absolute;
-    background-image: url(./img/plusing.svg);
     transform: rotate(45deg);
-    width: 20px;
-    height: 20px;
-    top: 10px;
-    right: 15px;
 }
+.dropdown__list {
+    opacity: 0;
+    height: 0;
+}
+.dropdown__item.dropdown__list--active > .dropdown__list {
+    opacity: 1;
+    height: auto;
+}
+li.dropdown__item.dropdown__list--active::before {
+    transform: rotate(90deg);
+}
+
 .option, .shown {
     cursor: pointer;
     font-weight: 300;
@@ -1464,6 +1473,7 @@ main {
     line-height: 17px;
     color: #1C1F20;
     padding-top: 16px;
+    padding-right: 26px;
 }
 .shown {
     font-weight: 600;
@@ -1667,10 +1677,167 @@ main {
 .card_info-about {
     display: none;
 }
-
-
+.cosmetic_filter-input {
+    border: none;
+    padding-left: 3%;
+    width: 80%;
+}
+.dropdown {
+    margin-left: 0;
+}
+.thanks_info-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #1C1F20;
+    padding-top: 16px;
+}
+.aboutImg img {
+    width: auto;
+}
+.order_line-price {
+    display: none;
+}
+.decor_title {
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 34px;
+}
 
 @media only screen and (max-width: 1439px) {
+    .privat_info-person {
+        margin-bottom: 20px;
+    }
+    .order_client-input {
+        margin-bottom: 25px;
+        margin: 2px;
+        width: auto;
+    }
+    .privat_info-input {
+        width: auto;
+        margin-bottom: 25px;
+        margin: 2px;
+    }
+    .privat_info-btn {
+        width: 320px;
+    }
+    .privat_info-form {
+        padding: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        flex-direction: column;
+    }
+    .privat_list {
+        padding: 32px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .privat_history-list {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .about_women-text {
+        line-height: 15px;
+        margin-bottom: 20px;
+    }
+    .about_women-title {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .about {
+        padding-top: 40px;
+        padding-bottom: 90px;
+    }
+    .about_part {
+        padding: 15px 35px;
+        width: 45%;
+        box-sizing: content-box;
+    }
+    .img_part img {
+        width: 100%;
+    }
+    .about_text {
+        width: 85%;
+    }
+    .aboutImg img {
+        width: 100%;
+    }
+    .about_img-part img {
+        width: 50%;
+    }
+    .question {
+        padding-right: 16px;
+        padding-left: 16px;
+        margin-bottom: 60px;
+    }
+    .contact_img {
+        height: 320px;
+    }
+    .contact_info-number {
+        margin-bottom: 16px;
+    }
+    .contact_info-tel {
+        margin-bottom: 0;
+    }
+    .contact_info-btn {
+        margin-bottom: 12px;
+    }
+    .contact_info-text {
+        margin-bottom: 12px;
+    }
+    .contact_info-time {
+        margin-bottom: 12px;
+    }
+    .contact_info {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .contact {
+        margin-left: 16px;
+        margin-right: 16px;
+        height: 320px;
+    }
+    .thanks_info_price {
+        margin-top: 22px;
+    }
+    .thanks_info {
+        padding: 28px 22px 22px 22px;
+        box-sizing: border-box;
+        width: 328px;
+        margin-bottom: 30px;
+        height: 387px;
+    }
+    .thanks {
+        margin-top: 30px;
+        margin-bottom: 74px;
+    }
+    .thanks_title {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .women_cards-item {
+        height: 300px;
+        width: 340px;
+    }
+    .women_cards-item img {
+        width: 100%;
+    }
+    .women_cards {
+        margin-right: 20px;
+        margin-left: 20px;
+        justify-content: space-around;
+    }
+    .delivery {
+        padding-left: 16px;
+        padding-right: 16px;
+    }    
+    .footer {
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
     .card_info-about {
         display: none;
     }
@@ -1694,9 +1861,127 @@ main {
     .brendMan img {
         width: 100%;
     }
+    .tab {
+        margin-top: 60px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
+    .privat {
+        display: none;
+    }
+    .privat-mob {
+        display: block;
+    }
+    .privat_info-input {
+        width: auto;
+        margin-bottom: 12px;
+    }
+    .privat_info-btn {
+        width: auto;
+    }
+    .order_basket-block {
+        margin-left: 3%;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .order_line-price {
+        display: block;
+        margin-top: 11px;
+    }
+    .order_basket-price {
+        display: none;
+    }
+    .order_basket-info {
+        position: relative;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .heart {
+        position: absolute;
+        top: 0;
+        right: 8px;
+    }
+    .privat_list {
+        padding: 0;
+        margin-left: 16px;
+        margin-right: 16px;
+        background: transparent;
+    }
+    #counter {
+        display: none;
+    }
+    .privat_history-info img {
+        display: none;
+    }
+    .privat_history-info {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .privat_history-title {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .privat_history-item {
+        padding-bottom: 16px;
+        padding-top: 0;
+    }
+    .privat_history-list {
+        margin-left: 16px;
+        margin-right: 16px;
+        padding: 16px;
+    }
+    .privat_info-person {
+        flex-direction: column;
+    }
+    .privat_info-form {
+        padding: 15px;
+        margin-left: 16px;
+        margin-right: 16px;
+        flex-direction: column;
+    }
+    .tablinks {
+        margin-bottom: 22px;
+        width: 100%;
+        text-align: left;
+        position: relative;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .tablinks::after {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 0;
+        right: 8px;
+        background-image: url(/img/privat.jpg);
+        background-repeat: no-repeat;
+    }
+    .tablinks.active::after {
+        transform: rotate(180deg);
+        top: -8px;
+        right: 10px;
+    }
+    .tab {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0;
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+    .about_more .about_women-btn {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .dropdown__item.dropdown__list--active > .dropdown__list {
+        opacity: 1;
+        height: 120px;
+    }
     .made {
         display: block;
     }
@@ -1822,16 +2107,16 @@ main {
         transition: 0.6s;
     }
     .option, .shown {
-        width: 300px;
-        height: 40px;
-        line-height: 40px;
+        width: auto;
+        height: auto;
+        line-height: 22px;
         padding-left: 15px;
         cursor: pointer;
     }
     .option {
-        font-size: 16px;
-        line-height: 25px;
-        margin-left: 15px;
+        font-size: 12px;
+        line-height: 14px;
+        margin-left: 8px;
     }
     .shown {
         font-weight: 400;
@@ -2078,7 +2363,9 @@ main {
         margin-bottom: 18px;
     }
     .about_more {
+        margin-right: 16px;
         margin-bottom: 0;
+        margin-left: 16px;
     }
     .sunglasses_img {
         width: 100%;
@@ -2313,10 +2600,13 @@ main {
         margin-right: 16px;
         flex-direction: column;
     }
-    .decor {
-        border-bottom: none;
+    .decor_title {
+        font-weight: 300;
         font-size: 20px;
         line-height: 24px;
+    }
+    .decor {
+        border-bottom: none;
     }
     .order_client {
         width: 100%;
@@ -2368,5 +2658,8 @@ main {
         padding-right: 30px;
     }
 }
+
+
+
 
 
