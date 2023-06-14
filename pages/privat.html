@@ -281,11 +281,10 @@
             </section>
 
 
-
             <section class="container privat-mob">
-                <div>
-                    <button class="tablinks">Контактная информация</button>
-                    <div id="info" class="">
+                <div class="tab">
+                    <button class="tablinks" onclick="openCard(event, 'infos')">Контактная информация</button>
+                    <div id="infos" class="tabcontent">
                     
                         <form class="privat_info-form">
                             <div class="privat_info-person">
@@ -351,13 +350,9 @@
                             </div>
                         </form>
 
-                </div>
-
-                </div>
-
-                <div>
-                    <button class="tablinks">Список желаний </button>
-                    <div id="list" class="">
+                    </div>
+                    <button class="tablinks" onclick="openCard(event, 'lists')">Список желаний </button>
+                    <div id="lists" class="tabcontent">
                         <div class="privat_list">
                             <div>
                                 <div class="order_basket-info">
@@ -413,11 +408,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div>
-                    <button class="tablinks">История заказа</button>
-                    <div id="history" class="">
+                    <button class="tablinks" onclick="openCard(event, 'historys')">История заказа</button>
+                    <div id="historys" class="tabcontent">
                         <ul class="privat_history-list">
                             <li class="privat_history-item">
                                 <div>

@@ -18,18 +18,37 @@
   })();
 
 
+
+  // index
   $(document).ready(function () {
     $('.hero-img').slick({
       infinite: true,
       slidesToScroll: 1,
+      arrows: false,
       arrows: true,
       variableWidth: true,
       autoplay: true,
       autoplaySpeed: 5000,
       dots: true,
-      
+      centerMode: true,
+      variableWidth: true, 
     });
   });
+
+
+  // $(document).ready(function () {
+  //   $('.first').slick({
+  //     infinite: true,
+  //     slidesToScroll: 1,
+  //     arrows: true,
+  //     variableWidth: true,
+  //     autoplay: true,
+  //     autoplaySpeed: 5000,
+  //     dots: true,
+  //     centerMode: true,
+  //     variableWidth: true, 
+  //   });
+  // });
 
 
 
@@ -152,5 +171,17 @@ function openCard(evt, cityName) {
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
+
+
+
+//card 
+$('.fade').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  arrows: false,
+  cssEase: 'linear'
+});
 
 
