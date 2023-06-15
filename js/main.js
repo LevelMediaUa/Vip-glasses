@@ -1,3 +1,13 @@
+document.querySelectorAll(".select").forEach((el)=> {
+  el.addEventListener("click", function (e){
+    if (e.target && e.target.matches(".option")) {
+      this.querySelector(".shown").innerHTML = e.target.innerHTML;
+    }
+    this.classList.toggle("collapsed");
+  });
+}); 
+
+
 (() => {
     const refs = {
       openBtn: document.querySelector("[menu-button-open]"),
@@ -39,14 +49,22 @@
     $('.hero-img').slick({
       infinite: true,
       slidesToScroll: 1,
-      arrows: false,
+      slidesToShow: 1,
       arrows: true,
       variableWidth: true,
       autoplay: true,
       autoplaySpeed: 5000,
       dots: true,
       centerMode: true,
-      variableWidth: true, 
+      responsive: [
+          {
+            breakpoint: 900,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+          }
+        ]
     });
   });
 

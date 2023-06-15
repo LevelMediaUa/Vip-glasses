@@ -126,7 +126,7 @@ main {
     content: url(./img/right.svg);
  }
 .slick-dots {
-    display: flex;
+    display: flex!important;
     transition-duration: 0.6s;
     background: transparent;
     bottom: 45px;
@@ -332,6 +332,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     width: 1440px;
+    display: flex;
 }
 .offers_title {
     font-weight: 300;
@@ -740,7 +741,6 @@ main {
     background: transparent;
     color: #000000;
     padding: 12px;
-    /* width: 160px; */
     height: 45px;
 }
 .order_btn.true {
@@ -772,7 +772,6 @@ main {
     font-size: 14px;
     line-height: 22px;
     color: #282828;
-    /* opacity: 0.5; */
 }
 .order_form {
     display: flex;
@@ -822,10 +821,6 @@ main {
     justify-content: space-between;
 }
 .order {
-    /* display: flex;
-    justify-content: space-between; */
-    /* margin-left: 80px;
-    margin-right: 80px; */
     padding-top: 45px;
     margin-bottom: 100px;
 }
@@ -936,9 +931,7 @@ main {
     margin-top: 100px;
     margin-bottom: 25px;
   }
-  
-  /* Style the buttons inside the tab */
-  .tablinks {
+.tablinks {
     border: none;
     outline: none;
     cursor: pointer;
@@ -947,8 +940,7 @@ main {
     line-height: 24px;
     text-transform: uppercase;
     font-weight: 300;
-  }
-
+}
 .tablinks.active {
     font-weight: 500;
 }
@@ -1107,7 +1099,6 @@ main {
     letter-spacing: 1.8px;
     text-transform: uppercase;
     color: #FFFFFF;
-    /* padding: 13px 38px; */
     cursor: pointer;
     display: flex;
     align-content: center;
@@ -1525,10 +1516,6 @@ li.dropdown__item.dropdown__list--active::before {
   border-bottom: 1px solid #848484;
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
-
-
-
-
 .filter {
   display: block;
   position: relative;
@@ -1611,11 +1598,6 @@ li.dropdown__item.dropdown__list--active::before {
     cursor: pointer;
     justify-content: center;
 }
-
-
-
-
-
 .special .slick-rev {
     display: none;
 }
@@ -1628,8 +1610,6 @@ li.dropdown__item.dropdown__list--active::before {
 .special .slick-next::after {
     display: none;
 }
-
-
 .special .slick-dots button {
     background: transparent;
     font-size: 0;
@@ -1641,7 +1621,6 @@ li.dropdown__item.dropdown__list--active::before {
     height: 12px;
     border: 1px solid #000000;
 }
-
 .special .slick-dots {
     display: flex;
     transition-duration: 0.6s;
@@ -1669,10 +1648,7 @@ li.dropdown__item.dropdown__list--active::before {
 .about_more-img {
     display: none;
 }
-/* нада в кард */
-/* .card_info-about {
-    display: none;
-} */
+
 .cosmetic_filter-input {
     border: none;
     padding-left: 3%;
@@ -1702,29 +1678,23 @@ li.dropdown__item.dropdown__list--active::before {
 .card_slide {
     display: none;
 }
-/* .special .slick-prev {
-    display: none!important;
+.photo_button {
+    display: none;
 }
-.special .slick-next {
-    display: none!important;
-} */
-    .photo_button {
-        display: none;
-    }
-    .backdrop {
-        overflow-y: scroll;
-        position: fixed;
-        z-index: 4;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: calc(100% - 78px);
-        background-color: rgba(0, 0, 0, 1);
-        transition-duration: 250ms;
-    }
-    body.modal-open {
-        overflow: hidden;
-    }
+.backdrop {
+    overflow-y: scroll;
+    position: fixed;
+    z-index: 4;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition-duration: 250ms;
+}
+body.modal-open {
+    overflow: hidden;
+}
     .backdrop.is-hidden {
         opacity: 0;
         pointer-events: none;
@@ -1732,19 +1702,17 @@ li.dropdown__item.dropdown__list--active::before {
     }
     .modal {
         position: relative;
-        top: 50%;
+        top: 45%;
         left: 50%;
-        /* display: flex; */
-        justify-content: flex-end;
         transform: translate(-50%, -50%);
         background-color: white;
-        width: 100%;
-        height: 100%;
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .modal-btn {
-        /* position: absolute;
-        top: 8px;
-        right: 8px; */
         align-items: center;
         height: 24px;
         width: 24px;
@@ -1839,7 +1807,16 @@ li.dropdown__item.dropdown__list--active::before {
         justify-content: space-between;
         margin-bottom: 11px;
     }
-
+.photo_parts {
+    width: 50%;
+    position: relative;
+}
+.photo_parts img {
+    width: 100%;
+}
+.deposit img {
+    height: 100%;
+}
 
 @media only screen and (max-width: 1439px) {
     .men {
@@ -1854,18 +1831,12 @@ li.dropdown__item.dropdown__list--active::before {
         background-repeat: no-repeat;
         background-position: center;
     }
-    /* .bestsellers-list-item {
-        display: none;
-    }
-    .bestsellers-list-item:first-child {
-        display: block;
-    } */
     .photo {
         width: 100%;
         display: flex;
     }
     .photo img {
-        width: 50%;
+        width: 100%;
     }
     .bestsellers-list-item img {
         width: 100%;
@@ -1888,6 +1859,10 @@ li.dropdown__item.dropdown__list--active::before {
     .deposit_block {
         padding: 16px;
         text-align: center;
+        width: 50%;
+    }
+    .deposit_picture {
+        width: 50%;
     }
     .deposit img {
         width: 100%;
@@ -1912,10 +1887,6 @@ li.dropdown__item.dropdown__list--active::before {
         flex-direction: column;
         align-items: center;
     }
-
-    /* .hero-img {
-        margin: auto;
-    } */
     .offers .slide.active {
         margin-left: 16px;
         margin-right: 16px;
@@ -2109,11 +2080,6 @@ li.dropdown__item.dropdown__list--active::before {
         margin-left: 0;
         margin-right: 0;
     }
-    /* нада в кард */
-    /* .card_info-about {
-        display: none;
-    } */
-
     .header {
         width: 100%;
     }
@@ -2156,10 +2122,6 @@ li.dropdown__item.dropdown__list--active::before {
         top: 45%;
         left: 5%;
     }
-    /* .main .main_title {
-        top: 45%;
-        right: 5%;
-    } */
     .header_prod {
         padding-left: 16px;
         padding-right: 16px;
@@ -2176,23 +2138,45 @@ li.dropdown__item.dropdown__list--active::before {
         margin-left: 16px;
         text-align: start;
         justify-content: center;
-        /* flex-direction: column; */
     }
     .btn-search:focus ~ .input-search {
         width: 180px;
     }
-    .backdrop {
-        height: calc(100% - 114px);
-    }
+      .input-search:focus{
+        width: 300px;
+      }
 }
 
 @media only screen and (max-width: 767px) {
-    .backdrop {
-        height: calc(100% - 78px);
+    .modal {
+        top: 40%;
+        left: 50%;
+        width: 100%;
+        height: 60%;
+    }
+    .deposit_block {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .deposit_picture {
+        width: 100%;
+    }
+    .photo {
+        flex-direction: column;
+    }
+    .photo_parts {
+        width: calc(100% - 32px);
+        background: #000000;
+        margin-bottom: 6px;
+        margin-left: 16px;
+        margin-right: 16px;
     }
     .btn-search:focus ~ .input-search {
         width: 60px;
     }
+      .input-search:focus {
+        width: 60px;
+      }
     .hero button {
          display: none!important;
     }
@@ -2227,7 +2211,7 @@ li.dropdown__item.dropdown__list--active::before {
         line-height: 24px;
     }
     .photo_button {
-        display: block;
+        display: flex;
         border: 1px solid #FFFFFF;
         width: 132px;
         height: 42px;
@@ -2236,9 +2220,17 @@ li.dropdown__item.dropdown__list--active::before {
         line-height: 22px;
         color: #FFFFFF;
         background-color: transparent;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        transform: translate(-50%, -50%);
     }
     .photo img {
         width: 100%;
+        opacity: 0.6;
     }
     .offers .next {
         right: 0;
@@ -2279,7 +2271,6 @@ li.dropdown__item.dropdown__list--active::before {
         left: 10%;
     }
     .main_title {
-        /* transform: scaleX(-1); */
         font-weight: 400;
         font-size: 20px;
         line-height: 24px;
@@ -2379,10 +2370,6 @@ li.dropdown__item.dropdown__list--active::before {
         margin-right: 16px;
         background: transparent;
     }
-    /* нада в кард */
-    /* #counter {
-        display: none;
-    } */
     .privat_history-info img {
         display: none;
     }
@@ -2486,7 +2473,7 @@ li.dropdown__item.dropdown__list--active::before {
         width: 100%;
         padding: 0;
         background-color: rgb(255, 255, 255);
-        top: 0;
+        bottom: 0;
         transition-duration: 0.8s;
         display: block;
     }
@@ -2759,11 +2746,6 @@ li.dropdown__item.dropdown__list--active::before {
     .men {
         height: 200px;
         margin-bottom: 40px;
-        /* background-size: cover; */
-        /* transform: scaleX(-1); */
-        /* background-repeat: no-repeat;
-        background-image: url(./img/men_mob.jpg);
-        background-position: bottom; */
     }
     .mobile_body .shown {
         font-weight: 400;
@@ -2876,9 +2858,6 @@ li.dropdown__item.dropdown__list--active::before {
         font-size: 14px;
         line-height: 22px;
     }
-    /* .brendHero img {
-        width: 50%;
-    } */
     .components_list {
         margin-left: 16px;
         margin-right: 16px;
@@ -2962,7 +2941,6 @@ li.dropdown__item.dropdown__list--active::before {
         margin-bottom: 18px;
     }
     .clide_change {
-        /* display: none; */
         margin-bottom: 8px;
         margin-top: 8px;
     }
