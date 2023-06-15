@@ -37,10 +37,10 @@
                                         <img src="../img/close.svg" alt="menu" class="icon-close" />
                                     </button>
                                 
-                                    <img src="../img/logo.svg">
+                                    <a href="../index.html"><img src="../img/logo.svg"></a>
                                     <div class="header_nav-list">
                                         <a class="header_nav-item"><img src="../img/lupa.svg" alt="lupa"></a>
-                                        <a class="header_nav-item"><img src="../img/people.svg" alt="people"></a>
+                                        <a href="../pages/privat.html" class="header_nav-item"><img src="../img/people.svg" alt="people"></a>
                                         <a class="header_nav-item"><img src="../img/shop.svg" alt="shop"></a>
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@
                                     <p class="mobile_lng-info">HE</p>
                                 </div>
                             </div>
-                <img src="../img/logo.svg">
+                <a href="../index.html"><img src="../img/logo.svg"></a>
                 <ul class="header_nav-list">
                     <li class="header_nav-item">ЖЕНЩИНЫ</li>
                     <li class="header_nav-item">МУЖЧИНЫ</li>
@@ -95,9 +95,68 @@
                         <button class="btn-search"></button>
                         <input type="text" class="input-search">
                         </a>
-                    <a class="header_nav-item"><img src="../img/people.svg" alt="people"></a>
-                    <a class="header_nav-item"><img src="../img/shop.svg" alt="shop"></a>
+                    <a href="../pages/privat.html" class="header_nav-item"><img src="../img/people.svg" alt="people"></a>
+                    <a class="header_nav-item" data-modal-open><img src="../img/shop.svg" alt="shop"></a>
                 </div>
+            </div>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <div class="modal_top">
+                        <h3 class="modal_basket-title">Корзина</h3>
+                        <button class="modal-btn" data-modal-close><img src="../img/plusing.svg"></button>
+                    </div>
+
+                    <div class="modal_body">
+                        <div class="">
+                            <img src="../img/order1.jpg">
+                            <h5 class="modal_body-title">VERSACE</h5>
+                            <div class="modal_body-info">
+                                <div>
+                                    <p class="modal_body-name">VE4409</p>
+                                    <p class="modal_body-name">brown</p>
+                                </div>
+                                <p class="modal_body-price">$224</p>
+                            </div>
+                        </div>
+                        <div id="counter">
+                            <img src="../img/2.svg"  data-action="decrement">
+                            <span id="value">1</span>
+                            <img src="../img/3.svg"  data-action="increment">
+                        </div>
+                        
+                        <img src="../img/basket.svg" class="modal_body-basket">
+                    </div>
+
+                    <div class="modal_footer">
+                        <div class="">
+                            <h4 class="modal_footer-title">Ваш заказ</h4>
+                           
+                            <h4 class="modal_footer-price">Сумма заказа <span>$66</span></h4>
+                            <hr>
+                            <h4 class="modal_footer-total">Итог заказа <span>$66</span></h4>
+                        </div>
+                        <a class="modal_btn">Оформить заказ</a>
+                    </div>
+                    <div class="footer-main">
+                        <div class="footer_main-about">
+                            <div><a href="./pages/about.html" target="_blank" class="footer_main-info">О нас </a><a href="./pages/delivery.html" class="footer_main-info" target="_blank">Оплата и доставка</a></div>
+                            <div><a href="./pages/exchange.html" class="footer_main-info" target="_blank">Обмен и возврат</a><a href="./pages/question.html" class="footer_main-info" target="_blank">Часто задаваемые вопросы</a></div>
+                            <div><a href="./pages/contact.html" class="footer_main-info" target="_blank">Контакты</a><a href="./pages/privacy.html" class="footer_main-info" target="_blank">Политика конфиденциальности</a></div>
+                            <div class="madeBy"><a href="https://levelmedia.com.ua/" class="footer_main-info" target="_blank">Сделано в  Level Media</a></div>
+                        </div>
+                        <div>
+                            <ul class="footer_main-pay">
+                                <li><img src="../img/pay1.jpg"></li>
+                                <li><img src="../img/pay2.jpg"></li>
+                                <li><img src="../img/pay3.jpg"></li>
+                                <li><img src="../img/pay4.jpg"></li>
+                                <li><img src="../img/pay5.jpg"></li>
+                            </ul>
+                            <div class="made"><a href="https://levelmedia.com.ua/" class="footer_main-info" target="_blank">Сделано в  Level Media</a></div>
+                        </div>
+                    </div>
+                    <div class="footer_law"><p>© 2023 Интернет-магазинв Вип глесс. Все права захищенные </p></div>
+              </div>
             </div>
        </header>
 
@@ -215,10 +274,10 @@
     <footer class="footer container">
         <div class="footer-main">
             <div class="footer_main-about">
-                <div><p class="footer_main-info">О нас </p><p class="footer_main-info">Оплата и доставка</p></div>
-                <div><p class="footer_main-info">Обмен и возврат</p><p class="footer_main-info">Часто задаваемые вопросы</p></div>
-                <div><p class="footer_main-info">Контакты</p><p class="footer_main-info">Политика конфиденциальности</p></div>
-                <div class="madeBy"><p class="footer_main-info">Сделано в  Level Media</p></div>
+                <div><a href="../pages/about.html" target="_blank" class="footer_main-info">О нас </a><a href="../pages/delivery.html" target="_blank" class="footer_main-info">Оплата и доставка</a></div>
+                <div><a href="../pages/exchange.html" target="_blank" class="footer_main-info">Обмен и возврат</a><a href="../pages/question.html" target="_blank" class="footer_main-info">Часто задаваемые вопросы</a></div>
+                <div><a href="../pages/contact.html" target="_blank" class="footer_main-info">Контакты</a><a href="../pages/privacy.html" target="_blank" class="footer_main-info">Политика конфиденциальности</a></div>
+                <div class="madeBy"><a href="https://levelmedia.com.ua/" target="_blank" class="footer_main-info">Сделано в  Level Media</a></div>
             </div>
             <div>
                 <ul class="footer_main-pay">
@@ -228,7 +287,7 @@
                     <li><img src="../img/pay4.jpg"></li>
                     <li><img src="../img/pay5.jpg"></li>
                 </ul>
-                <div class="made"><p class="footer_main-info">Сделано в  Level Media</p></div>
+                <div class="made"><a class="footer_main-info" href="https://levelmedia.com.ua/" class="footer_main-info" target="_blank">Сделано в  Level Media</a></div>
             </div>
         </div>
         <div class="footer_law"><p>© 2023 Интернет-магазинв Вип глесс. Все права захищенные </p></div>
